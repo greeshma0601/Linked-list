@@ -1,3 +1,15 @@
+/*Given a linked list, the task is to find the n'th node from the end.  It is needed to complete a method that takes two argument, head of linked list and an integer n. There are multiple test cases. For each test case, this method will be called individually.
+Input:
+2
+9 2
+1 2 3 4 5 6 7 8 9
+4 5
+10 5 100 5 1
+ 
+
+Output:
+8
+-1*/
 #include <stdio.h>
 #include <stdlib.h>
 #include<iostream>
