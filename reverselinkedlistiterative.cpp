@@ -81,7 +81,7 @@ while(n!=NULL)
 n=n->next;
 mid->next=prevmid;
 if(prevmid==head) 
-prevmid->next=NULL;
+{prevmid->next=NULL;}
 prevmid=mid;
 }
 return prevmid;
