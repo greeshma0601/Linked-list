@@ -133,28 +133,35 @@ node->next=NULL;
 return;
 }
 */
-void removeTheLoop(Node *node)
+void removeTheLoop(Node *head)
 {
-    Node *fast = node, *slow = node;
-    while(!fast && !fast->next)
-    {
-        fast = fast->next->next;
-        slow = slow->next;
-        if(fast == slow)
-            break;
-    }
+    Node *fptr = head;
     
-    Node* prev=fast;
-    if(slow == fast){
-        slow = node;
-        while(!fast && !fast->next){
-            if(fast == slow)
-                break;
-            prev=fast;
-            fast = fast->next;
-            slow = slow->next;
-        }
-        prev->next = NULL;
-    }
+Node *sptr = head;
 
+int loop = 0;
+while (sptr && fptr && fptr->next)
+{
+sptr = sptr->next;
+fptr = fptr->next->next;
+if (fptr==sptr)
+{
+loop = 1;
+break;
+}
+}
+if (loop==1)
+{
+sptr = head;
+while (sptr!=fptr)
+{
+sptr = sptr->next;
+fptr = fptr->next;
+}
+}
+//Node *loopnode = sptr;
+Node *temp = sptr;
+while (temp->next!=fptr && temp->next!=sptr)
+temp = temp->next;
+temp->next = NULL;
 }
