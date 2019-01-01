@@ -1,3 +1,22 @@
+/*
+
+
+Example:
+Input
+2
+2
+1 2
+1
+4
+10 20 4 30
+20
+
+Output
+2
+10 4 30
+
+*/
+
 #include<bits/stdc++.h>
 using namespace std;
 /* Link list node */
