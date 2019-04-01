@@ -33,6 +33,20 @@ Output:
 
 */
 
+Node *addOne(Node *head)
+{
+   // Your Code here
+   int n=0;
+   Node *t=head;
+   while(t)
+   {
+       n=n*10+t->data;
+       t=t->next;
+   }
+   cout<<n+1;
+   return NULL;
+}
+
 /*
 // C++ program to add 1 to a linked list 
 #include<bits/stdc++.h> 
